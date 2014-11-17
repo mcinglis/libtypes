@@ -21,12 +21,25 @@
 #define LIBTYPES_TYPES_H
 
 
-#include <stdbool.h>        // @export
 #include <stddef.h>         // @export
 #include <stdint.h>         // @export
 #include <uchar.h>          // @export
 #include <stdalign.h>       // @export
 #include <stdnoreturn.h>    // @export
+
+
+// <stdbool.h> defines `bool` as a macro for `_Bool`, which messes up code
+// generation - we want to be able to generate `bool` functions with
+// consistently-styled names. So instead, we define our own `bool` enum type:
+typedef enum { false = 0,
+               true = 1 } bool;
+
+
+// An ordering enum, representing the relations "less than", "equal to", and
+// "greater than".
+typedef enum { LT = -1,
+               EQ = 0,
+               GT = 1 } ord;
 
 
 typedef     signed char             schar;
@@ -37,11 +50,6 @@ typedef     unsigned long           ulong;
 typedef     long long               llong;
 typedef     unsigned long long      ullong;
 typedef     long double             ldouble;
-
-
-typedef enum { LT = -1,
-               EQ = 0,
-               GT = 1 } ord;
 
 
 //                        <type>            <type name>,    <func name>

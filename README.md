@@ -1,14 +1,17 @@
 
-**[Libtypes](https://github.com/mcinglis/libtypes)** is a micro-library that defines a saner set of base types and names. It:
+**Libtypes** is a micro-library that defines a saner set of base types and names. It:
 
 - typedefs shorter names for the base types, such as `ullong` instead of `unsigned long long`;
 - defines an ordering enum type, `ord`, with values `LT`, `EQ` or `GT`;
-- includes the libc headers that define or typedef more standardized types such as `bool`, `size_t` or `int16_t`;
+- defines a boolean enum type, `bool`, with values `false`, `true` - just like `stdbool.h`, but `bool` is an actual type, rather than a macro.
+- includes the libc headers that define or typedef more standardized types such as `size_t` or `int16_t`;
 - defines a tuple for each type by `( type, typename, funcname )`, where `typename` is the name of the type in generic structs (e.g. `Vector_int`), and `funcname` is the name of the type in generic functions (e.g.  `int__add`).
 
 The included libc headers have a `// @export` beside them to indicate that users of the header file can depend on those header files being included within.
 
 I'll tag a new major version if I change anything, or add anything outside of the `libtypes_` namespace. Every version tag will be signed with [my GPG key](http://pool.sks-keyservers.net/pks/lookup?op=vindex&search=0xD020F814) (fingerprint: `0xD020F814`).
+
+Libtypes is available at [GitHub](https://github.com/mcinglis/libtypes) and [Bitbucket](https://bitbucket.org/mcinglis/libtypes).
 
 
 ## License: AGPL
