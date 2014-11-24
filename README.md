@@ -11,16 +11,16 @@ The included libc headers have a `// @export` beside them to indicate that users
 
 I'll tag a new major version if I change anything, or add anything outside of the `libtypes_` namespace. Every version tag will be signed with [my GPG key](http://pool.sks-keyservers.net/pks/lookup?op=vindex&search=0xD020F814) (fingerprint: `0xD020F814`).
 
-Libtypes is available at [GitHub](https://github.com/mcinglis/libtypes) and [Bitbucket](https://bitbucket.org/mcinglis/libtypes).
+Libtypes is available at [Gitorious](https://gitorious.org/mcinglis/libtypes), [Bitbucket](https://bitbucket.org/mcinglis/libtypes), and [GitHub](https://github.com/mcinglis/libtypes).
 
 
 ## License: AGPL
 
 **Copyright 2014 Malcolm Inglis <http://minglis.id.au>**
 
-Libtypes is free software: you can redistribute it and/or modify it under the terms of the [GNU Affero General Public License](https://gnu.org/licenses/agpl.html) as     published by the [Free Software Foundation](https://fsf.org), either version 3 of the License, or (at your option) any later version.
+Libtypes is free software: you can redistribute it and/or modify it under the terms of the [GNU Affero General Public License](https://gnu.org/licenses/agpl.html) as published by the [Free Software Foundation](https://fsf.org), either version 3 of the License, or (at your option) any later version.
 
-Libtypes is distributed in the hope that it will be useful, but **without any warranty**; without even the implied warranty of **merchantability** or **fitness for a     particular purpose**. See the GNU Affero General Public License for more details.
+Libtypes is distributed in the hope that it will be useful, but **without any warranty**; without even the implied warranty of **merchantability** or **fitness for a particular purpose**. See the GNU Affero General Public License for more details.
 
 You should have received a copy of the GNU Affero General Public License along with Libtypes. If not, see <https://gnu.org/licenses/>.
 
