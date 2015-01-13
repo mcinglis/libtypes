@@ -23,11 +23,8 @@
 
 #include <stddef.h>         // @export
 #include <stdint.h>         // @export
-
-#if __STDC_VERSION__ == 201112L
 #include <stdalign.h>       // @export
 #include <stdnoreturn.h>    // @export
-#endif
 
 
 // <stdbool.h> defines `bool` as a macro for `_Bool`, which messes up code
