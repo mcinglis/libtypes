@@ -23,9 +23,6 @@
 
 #include <stddef.h>         // @export
 #include <stdint.h>         // @export
-#include <uchar.h>          // @export
-#include <stdalign.h>       // @export
-#include <stdnoreturn.h>    // @export
 
 
 // <stdbool.h> defines `bool` as a macro for `_Bool`, which messes up code
