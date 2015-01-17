@@ -16,7 +16,7 @@ Libtypes is available at [Gitorious](https://gitorious.org/mcinglis/libtypes), [
 
 ## License: AGPL
 
-**Copyright 2014 Malcolm Inglis <http://minglis.id.au>**
+**Copyright 2015 Malcolm Inglis <http://minglis.id.au>**
 
 Libtypes is free software: you can redistribute it and/or modify it under the terms of the [GNU Affero General Public License](https://gnu.org/licenses/agpl.html) as published by the [Free Software Foundation](https://fsf.org), either version 3 of the License, or (at your option) any later version.
 
