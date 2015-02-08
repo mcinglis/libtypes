@@ -21,17 +21,20 @@
 #define LIBTYPES_TYPES_H
 
 
+#include <stdbool.h>        // @export
 #include <stddef.h>         // @export
 #include <stdint.h>         // @export
-#include <stdalign.h>       // @export
+
+#if __STDC_VERSION__ >= 201112L
 #include <stdnoreturn.h>    // @export
+#endif
 
 
 // <stdbool.h> defines `bool` as a macro for `_Bool`, which messes up code
 // generation - we want to be able to generate `bool` functions with
-// consistently-styled names. So instead, we define our own `bool` enum type:
-typedef enum { false = 0,
-               true = 1 } bool;
+// consistently-styled names. So instead, we define our own `bool` type:
+#undef bool
+typedef _Bool bool;
 
 
 // An ordering enum, representing the relations "less than", "equal to", and
@@ -50,6 +53,8 @@ typedef     long long               llong;
 typedef     unsigned long long      ullong;
 typedef     long double             ldouble;
 
+
+// @public start
 
 //                        <type>            <type name>,    <func name>
 #define BOOL_TYPE       ( bool,             bool,           bool )
@@ -71,13 +76,6 @@ typedef     long double             ldouble;
 #define DOUBLE_TYPE     ( double,           double,         double )
 #define LDOUBLE_TYPE    ( ldouble,          ldouble,        ldouble )
 
-#define PTR_TYPE        ( void *,           ptr,            ptr )
-#define CONSTPTR_TYPE   ( void const *,     constptr,       constptr )
-
-#define PTRDIFF_TYPE    ( ptrdiff_t,        ptrdiff,        ptrdiff )
-#define WCHAR_TYPE      ( wchar_t,          wchar,          wchar )
-#define SIZE_TYPE       ( size_t,           size,           size )
-
 #define INT8_TYPE       ( int8_t,           int8,           int8 )
 #define INT16_TYPE      ( int16_t,          int16,          int16 )
 #define INT32_TYPE      ( int32_t,          int32,          int32 )
@@ -88,8 +86,17 @@ typedef     long double             ldouble;
 #define UINT32_TYPE     ( uint32_t,         uint32,         uint32 )
 #define UINTMAX_TYPE    ( uintmax_t,        uintmax,        uintmax )
 
-#define CHAR16_TYPE     ( char16_t,         char16,         char16 )
-#define CHAR32_TYPE     ( char32_t,         char32,         char32 )
+#define PTRDIFF_TYPE    ( ptrdiff_t,        ptrdiff,        ptrdiff )
+#define WCHAR_TYPE      ( wchar_t,          wchar,          wchar )
+#define SIZE_TYPE       ( size_t,           size,           size )
+
+#define PTR_TYPE        ( void *,           ptr,            ptr )
+#define CONSTPTR_TYPE   ( void const *,     constptr,       constptr )
+
+#define STR_TYPE        ( char *,           str,            str )
+#define CONSTSTR_TYPE   ( char const *,     conststr,       conststr )
+
+// @public end
 
 
 #endif
