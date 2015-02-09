@@ -27,6 +27,8 @@
 
 #if __STDC_VERSION__ >= 201112L
 #include <stdnoreturn.h>    // @export
+#else
+#define noreturn
 #endif
 
 
