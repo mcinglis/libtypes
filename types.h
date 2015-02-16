@@ -39,11 +39,12 @@
 typedef _Bool bool;
 
 
-// An ordering enum, representing the relations "less than", "equal to", and
+// An ordering type, representing the relations "less than", "equal to", and
 // "greater than".
-typedef enum { LT = -1,
-               EQ = 0,
-               GT = 1 } ord;
+typedef schar ord;
+#define LT -1
+#define EQ 0
+#define GT 1
 
 
 typedef     signed char             schar;
