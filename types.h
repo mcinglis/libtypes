@@ -32,6 +32,16 @@
 #endif
 
 
+typedef     signed char             schar;
+typedef     unsigned char           uchar;
+typedef     unsigned short          ushort;
+typedef     unsigned int            uint;
+typedef     unsigned long           ulong;
+typedef     long long               llong;
+typedef     unsigned long long      ullong;
+typedef     long double             ldouble;
+
+
 // <stdbool.h> defines `bool` as a macro for `_Bool`, which messes up code
 // generation - we want to be able to generate `bool` functions with
 // consistently-styled names. So instead, we define our own `bool` type:
@@ -45,16 +55,6 @@ typedef schar ord;
 #define LT -1
 #define EQ 0
 #define GT 1
-
-
-typedef     signed char             schar;
-typedef     unsigned char           uchar;
-typedef     unsigned short          ushort;
-typedef     unsigned int            uint;
-typedef     unsigned long           ulong;
-typedef     long long               llong;
-typedef     unsigned long long      ullong;
-typedef     long double             ldouble;
 
 
 // @public start
