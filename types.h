@@ -43,8 +43,8 @@ typedef     long double             ldouble;
 
 
 // <stdbool.h> defines `bool` as a macro for `_Bool`, which messes up code
-// generation - we want to be able to generate `bool` functions with
-// consistently-styled names. So instead, we define our own `bool` type:
+// generation via macros - we want to be able to generate `bool` functions
+// with consistently-styled names. So instead, we define our own `bool` type:
 #undef bool
 typedef _Bool bool;
 
@@ -93,11 +93,11 @@ typedef schar ord;
 #define WCHAR_TYPE      ( wchar_t,          wchar,          wchar )
 #define SIZE_TYPE       ( size_t,           size,           size )
 
-#define PTR_TYPE        ( void *,           ptr,            ptr )
-#define CONSTPTR_TYPE   ( void const *,     constptr,       constptr )
+#define PTR_TYPE        ( void const *,     ptr,            ptr )
+#define PTRM_TYPE       ( void *,           ptrm,           ptrm )
 
-#define STR_TYPE        ( char *,           str,            str )
-#define CONSTSTR_TYPE   ( char const *,     conststr,       conststr )
+#define STR_TYPE        ( char const *,     str,            str )
+#define STRM_TYPE       ( char *,           strm,           strm )
 
 // @public end
 
